@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<title>Products — Elephant Music | Violins, Pianos & Accessories</title>
+<meta name="description" content="Browse Elephant Music's instrument collection: S&L handcrafted violins, German GÖTZ violins, Italian Adriano violins, Petrof pianos, and accessories.">
+<link rel="icon" href="https://user-assets.sxlcdn.com/images/182709/FicR0Wn1bgKwD7T1GrFG16CW3m3k.png?imageMogr2/strip/thumbnail/64x64>/quality/90!/format/png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="/css/style.css">
+<style>
+.cat-header { text-align:center; padding:30px 0 20px; }
+.cat-header h2 { color: var(--primary); }
+.cat-header h2 i { margin-right: 8px; }
+.product-detail-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.product-detail-card {
+  display: flex;
+  gap: 30px;
+  background: var(--bg-white);
+  border-radius: 14px;
+  box-shadow: 0 4px 20px var(--shadow);
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.product-detail-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 35px var(--shadow);
+}
+.product-detail-card .detail-img {
+  flex: 0 0 320px;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f0e8;
+  padding: 20px;
+  overflow: hidden;
+}
+.product-detail-card .detail-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-detail-card .detail-body {
+  flex: 1;
+  padding: 28px 28px 28px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-detail-card .detail-body .cat { font-size: 0.8rem; color: var(--text-light); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+.product-detail-card .detail-body h3 { font-size: 1.3rem; margin-bottom: 10px; color: var(--primary-dark); }
+.product-detail-card .detail-body .desc { font-size: 0.92rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 12px; }
+.product-detail-card .detail-body .specs { font-size: 0.85rem; color: var(--text-light); margin-bottom: 12px; }
+.product-detail-card .detail-body .specs span { display: inline-block; margin-right: 18px; }
+.product-detail-card .detail-body .price-row { margin-top: auto; display: flex; align-items: center; gap: 20px; }
+.product-detail-card .detail-body .price-row .price { font-size: 1.4rem; font-weight: 700; color: var(--primary); }
+.product-detail-card .detail-body .price-row .price-range { font-size: 1.1rem; font-weight: 600; color: var(--primary); }
+.product-detail-card .detail-body .price-row .btn-sm {
+  display: inline-block;
+  padding: 8px 24px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+.product-detail-card .detail-body .price-row .btn-sm:hover { background: var(--primary-dark); color: #fff; }
+.product-detail-card .detail-img.gallery-2 { padding: 15px; }
+.product-detail-card .detail-img.gallery-2 .gallery-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; }
+.product-detail-card .detail-img.gallery-2 .gallery-inner img { width: 100%; height: auto; border-radius: 6px; }
+.product-detail-card .detail-img.gallery-3 .gallery-inner { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; width: 100%; }
+.product-detail-card .detail-img.gallery-3 .gallery-inner img { width: 100%; height: auto; border-radius: 6px; }
+.product-detail-card .detail-img.gallery-4 .gallery-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; width: 100%; }
+.product-detail-card .detail-img.gallery-4 .gallery-inner img { width: 100%; height: auto; border-radius: 6px; }
+@media (max-width: 768px) {
+  .product-detail-card { flex-direction: column; }
+  .product-detail-card .detail-img { flex: 0 0 auto; width: 100%; min-height: 200px; }
+  .product-detail-card .detail-body { padding: 20px; }
+  .product-detail-card .detail-body .price-row { flex-wrap: wrap; gap: 12px; }
+}
+</style>
+    <link rel="canonical" href="https://www.elephantmusic.cn/products.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Products — Elephant Music Instrument Collection">
+    <meta property="og:description" content="Handcrafted violins, pianos, and accessories from S&L, GÖTZ, Adriano, and Petrof.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.elephantmusic.cn/products.html">
+    <meta property="og:image" content="https://user-assets.sxlcdn.com/images/182709/FicR0Wn1bgKwD7T1GrFG16CW3m3k.png">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Products — Elephant Music Instrument Collection">
+    <meta name="twitter:description" content="Handcrafted violins, pianos, and accessories from S&L, GÖTZ, Adriano, and Petrof.">
+    <meta name="twitter:image" content="https://user-assets.sxlcdn.com/images/182709/FicR0Wn1bgKwD7T1GrFG16CW3m3k.png">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicSchool",
+  "name": "Elephant Music (Ai Yue Fen)",
+  "alternateName": "爱乐芬音乐",
+  "description": "Premium music education and handcrafted instrument company since 2000.",
+  "url": "https://www.elephantmusic.cn",
+  "logo": "https://user-assets.sxlcdn.com/images/182709/FicR0Wn1bgKwD7T1GrFG16CW3m3k.png",
+  "foundingDate": "2000",
+  "foundingLocation": "Taipei, Taiwan",
+  "areaServed": [
+    "Hangzhou",
+    "Jiaxing",
+    "Taipei",
+    "Tongxiang"
+  ],
+  "brand": {
+    "@type": "Brand",
+    "name": "S&L Instruments"
+  },
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "general",
+      "telephone": "+86-571-88092786",
+      "email": "susan@elephantmusic.cn",
+      "availableLanguage": [
+        "Chinese",
+        "English"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "contactType": "sales",
+      "email": "aurora@elephantmusic.cn"
+    },
+    {
+      "@type": "ContactPoint",
+      "contactType": "support",
+      "email": "amelia@elephantmusic.cn"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "No. 966 Shangtang Road, Gongshu District",
+    "addressLocality": "Hangzhou",
+    "addressRegion": "Zhejiang",
+    "addressCountry": "CN"
+  }
+}
+    </script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What instruments do you teach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer professional instruction in violin and piano for all ages, from beginner children to adults. Our curriculum includes the renowned Le Yi Violin Method by Zhang Jiazhen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer instrument rental?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We've been offering eco-friendly violin rental since 2006, reducing the barrier to learning music. Rental options range from student instruments to professional performance violins."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What brands of instruments do you carry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We carry our own S&L brand violins, exclusive German GÖTZ violins, Italian master luthier Adriano violins, and Petrof pianos from Czech Republic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are your locations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We have locations in Hangzhou (Gongshu & Xiacheng), Jiaxing (Nanhu), Taipei (City Hall & Tianmu), and our manufacturing facility AYF Music Base in Tongxiang, Zhejiang."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer online music courses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer online music courses for students who cannot attend in person, including our popular adult relaxation piano program and virtual violin lessons."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body>
+
+<div class="lang-switch"><a href="https://www.elephantmusic.cn">中文站</a></div>
+
+<nav id="mainNav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="https://user-assets.sxlcdn.com/images/182709/FicR0Wn1bgKwD7T1GrFG16CW3m3k.png?imageMogr2/strip/auto-orient/thumbnail/!64x64r/gravity/Center/crop/64x64/quality/90!/format/png" alt="Elephant Music">
+      <span>Elephant Music</span>
+    </a>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li class="has-dropdown">
+        <a href="/products.html" class="active">Products</a>
+        <ul class="dropdown-menu">
+          <li><a href="#violins">Violins</a></li>
+          <li><a href="#pianos">Pianos</a></li>
+          <li><a href="#accessories">Accessories</a></li>
+        </ul>
+      </li>
+      <li><a href="/rental.html">Rental</a></li>
+      <li class="has-dropdown">
+        <a href="/courses.html">Courses</a>
+        <ul class="dropdown-menu">
+          <li><a href="/course-leyi.html">Zhang Jiazhen Violin Course</a></li>
+          <li><a href="/course-violin-beginner.html">Violin for Beginners</a></li>
+          <li><a href="/course-children-piano.html">Children's Piano</a></li>
+          <li><a href="/course-adult-piano.html">Adult Piano (Stress-Free)</a></li>
+          <li><a href="/course-master-class.html">Master Classes</a></li>
+          <li><a href="/course-online.html">Online Courses</a></li>
+        </ul>
+      </li>
+      <li><a href="/news.html">News</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="page-banner">
+  <h1>Musical Instruments</h1>
+  <p>Premium handcrafted instruments for every musician</p>
+</section>
+
+<section id="violins">
+  <div class="container">
+    <div class="cat-header">
+      <h2><i class="fas fa-violin"></i> Violins</h2>
+      <p style="color:var(--text-light);">Handcrafted violins from S&L, German Götz, and Italian master luthiers</p>
+    </div>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://user-assets.sxlcdn.com/images/182709/FuAZQm-I9amlbfgmy1wv0Dy6LakM.png?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/format/png" alt="Italy g23 Import Violin" style="object-fit:contain;background:#f5f0e8;padding:20px;">
+        <div class="info">
+          <div class="cat">Italian Master</div>
+          <h3>Italy g23 Import Violin</h3>
+          <div class="price">$29,530</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://user-assets.sxlcdn.com/images/182709/FmS6JUgIbIhkDTRUlsHV1Gz6B2e1.jpg?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/interlace/1/format/jpg" alt="Italy g19 Import Violin" style="object-fit:contain;background:#f5f0e8;padding:20px;">
+        <div class="info">
+          <div class="cat">Italian Master</div>
+          <h3>Italy g19 Import Violin</h3>
+          <div class="price">$21,420</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://user-assets.sxlcdn.com/images/182709/FsOlmtg8crnWvNornGq3io-bPsVy.jpg?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/interlace/1/format/jpg" alt="Italy a17 Violin" style="object-fit:contain;background:#f5f0e8;padding:20px;">
+        <div class="info">
+          <div class="cat">Italian Master</div>
+          <h3>Italy a17 Violin</h3>
+          <div class="price">$7,690</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://user-assets.sxlcdn.com/images/182709/FshZcOjj-BFlP6Gi9LeJI85ojqu-.png?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/format/png" alt="S&L 100 Handmade Violin" style="object-fit:contain;background:#f5f0e8;padding:20px;">
+        <div class="info">
+          <div class="cat">S&L Handmade</div>
+          <h3>S&amp;L 100 Handmade Violin</h3>
+          <div class="price">$5,840</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://user-assets.sxlcdn.com/images/182709/FoP_ZE-rTVsrV4l7ZVU4AkDL3Ej_.png?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/format/png" alt="S&L OEL90" style="object-fit:contain;background:#f5f0e8;padding:20px;">
+        <div class="info">
+          <div class="cat">S&L Handmade</div>
+          <h3>S&amp;L OEL90 Handmade Violin</h3>
+          <div class="price">$5,010</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://user-assets.sxlcdn.com/images/182709/Fq9Hbb6QFlCUh46zT3WgCN-Ofmv6.jpg?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/interlace/1/format/jpg" alt="Gotz 136CA" style="object-fit:contain;background:#f5f0e8;padding:20px;">
+        <div class="info">
+          <div class="cat">German Götz</div>
+          <h3>German Götz Violin 136CA</h3>
+          <div class="price">$4,090</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://user-assets.sxlcdn.com/images/182709/Fqn-_ZnrLKM5jJFTimfN_nfcO9Jg.png?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/format/png" alt="S&L OEL80" style="object-fit:contain;background:#f5f0e8;padding:20px;">
+        <div class="info">
+          <div class="cat">S&L Handmade</div>
+          <h3>S&amp;L OEL80 Handmade Violin</h3>
+          <div class="price">$3,710</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://user-assets.sxlcdn.com/images/182709/FgDoBEBKHiV8XfkDnqDqhR1Q54al.png?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/format/png" alt="Gotz 123CT" style="object-fit:contain;background:#f5f0e8;padding:20px;">
+        <div class="info">
+          <div class="cat">German Götz</div>
+          <h3>German Götz Violin 123CT</h3>
+          <div class="price">$2,570</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://user-assets.sxlcdn.com/images/182709/FhKR4MqiYbdu6fosQNlUOjDdceRs.png?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/format/png" alt="S&L OEL70" style="object-fit:contain;background:#f5f0e8;padding:20px;">
+        <div class="info">
+          <div class="cat">S&L Handmade</div>
+          <h3>S&amp;L OEL70 Handmade Violin</h3>
+          <div class="price">$2,880</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://user-assets.sxlcdn.com/images/182709/FjrIr3GP16OagjLarw7TicYdBV9C.png?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/format/png" alt="S&L OEL60" style="object-fit:contain;background:#f5f0e8;padding:20px;">
+        <div class="info">
+          <div class="cat">S&L Handmade</div>
+          <h3>S&amp;L OEL60 Handmade Violin</h3>
+          <div class="price">$2,540</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://user-assets.sxlcdn.com/images/182709/FoS2-YxG_ibGrGx63Ec6KKU9Swy_.png?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/format/png" alt="S&L CEL611" style="object-fit:contain;background:#f5f0e8;padding:20px;">
+        <div class="info">
+          <div class="cat">S&L Handmade</div>
+          <h3>S&amp;L CEL611 Handmade Violin</h3>
+          <div class="price">$2,170</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://user-assets.sxlcdn.com/images/182709/FtCukQl6pKO4i22KIYbWjtzNEFWj.png?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/format/png" alt="S&L FI11" style="object-fit:contain;background:#f5f0e8;padding:20px;">
+        <div class="info">
+          <div class="cat">S&L Handmade</div>
+          <h3>S&amp;L FI11 Handmade Violin</h3>
+          <div class="price">$1,480</div>
+        </div>
+      </div>
+      <div class="product-card" style="opacity:0.7;">
+        <img src="https://user-assets.sxlcdn.com/images/182709/Fn7ULHROZmwRQ98pHxLPJXY-aMuM.png?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/format/png" alt="S&L SI05" style="object-fit:contain;background:#f5f0e8;padding:20px;">
+        <div class="info">
+          <div class="cat">S&L Student</div>
+          <h3>S&amp;L SI05 Student Violin</h3>
+          <div class="price">$824</div>
+          <div style="font-size:0.8rem;color:var(--text-light);">Also available for rental</div>
+        </div>
+      </div>
+      <div class="product-card" style="opacity:0.7;">
+        <img src="https://user-assets.sxlcdn.com/images/182709/FobD8PYKcVyplUWNOSoY3khNJNtr.png?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/format/png" alt="S&L SI03" style="object-fit:contain;background:#f5f0e8;padding:20px;">
+        <div class="info">
+          <div class="cat">S&L Student</div>
+          <h3>S&amp;L SI03 Student Violin</h3>
+          <div class="price">$535</div>
+          <div style="font-size:0.8rem;color:var(--text-light);">Also available for rental</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <p style="color:var(--text-light);">📍 Also available to rent! Check our <a href="/rental.html">Rental Program</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="pianos" style="background:var(--bg-white);">
+  <div class="container">
+    <div class="cat-header">
+      <h2><i class="fas fa-piano"></i> Pianos</h2>
+      <p style="color:var(--text-light);">Petrof Fibich and S&L pianos — from upright to grand</p>
+    </div>
+    <div class="product-detail-grid">
+
+      <!-- Petrof Fibich K-122S -->
+      <div class="product-detail-card">
+        <div class="detail-img">
+          <img src="https://user-assets.sxlcdn.com/images/182709/FnI2Etv3y7ex0G1S4SmEzAwT4bBa.jpg?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/interlace/1/format/jpeg" alt="Petrof Fibich K-122S Upright Piano">
+        </div>
+        <div class="detail-body">
+          <div class="cat">Petrof Fibich · Academy Series</div>
+          <h3>Petrof Fibich K-122S Upright Piano</h3>
+          <div class="desc">
+            The K-122S is a medium-small upright piano from the Fibich Academy Series. With its streamlined, contemporary cabinet design, it is ideally suited for home practice and training, yet equally capable in music schools and chamber music settings. Responsive action and a clear, well-balanced tone make it a reliable companion for developing pianists and institutions alike.
+          </div>
+          <div class="specs">
+            <span><i class="fas fa-ruler"></i> Depth: 568mm</span>
+            <span><i class="fas fa-ruler-vertical"></i> Height: 1225mm</span>
+            <span><i class="fas fa-arrows-alt-h"></i> Width: 1475mm</span>
+          </div>
+          <div class="price-row">
+            <div class="price">$5,150</div>
+            <a href="/contact.html" class="btn-sm">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Petrof Fibich F-123ST -->
+      <div class="product-detail-card">
+        <div class="detail-img gallery-2">
+          <div class="gallery-inner">
+            <img src="https://user-assets.sxlcdn.com/images/182709/Fu8mI5lpHtYkDc_hAz0GRm2clUD7.jpg?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/interlace/1/format/jpeg" alt="Petrof Fibich F-123ST - Front">
+            <img src="https://user-assets.sxlcdn.com/images/182709/FndVh0CpMbr_4B5-wDGyjPzMQu2a.jpg?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/interlace/1/format/jpeg" alt="Petrof Fibich F-123ST - Side">
+          </div>
+        </div>
+        <div class="detail-body">
+          <div class="cat">Petrof Fibich · Musician Series</div>
+          <h3>Petrof Fibich F-123ST Upright Piano</h3>
+          <div class="desc">
+            The F-123ST is a medium upright piano from the Musician Series. It features a highly responsive action mechanism and produces a pure, vibrant, and beautifully rounded tone. The modern, clean-lined cabinet design blends effortlessly into any contemporary home or teaching studio. A superb choice for the advancing pianist who demands expressive control.
+          </div>
+          <div class="specs">
+            <span><i class="fas fa-ruler"></i> Depth: 568mm</span>
+            <span><i class="fas fa-ruler-vertical"></i> Height: 1235mm</span>
+            <span><i class="fas fa-arrows-alt-h"></i> Width: 1475mm</span>
+          </div>
+          <div class="price-row">
+            <div class="price">$6,520</div>
+            <a href="/contact.html" class="btn-sm">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Petrof Fibich F-127S -->
+      <div class="product-detail-card">
+        <div class="detail-img gallery-2">
+          <div class="gallery-inner">
+            <img src="https://user-assets.sxlcdn.com/images/182709/FmNijM6Yzmp8blkbeka5xkajPY4s.jpg?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/interlace/1/format/jpeg" alt="Petrof Fibich F-127S - Front">
+            <img src="https://user-assets.sxlcdn.com/images/182709/FoaaasrmsSlhFPIMazCM_5cJkz5G.jpg?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/interlace/1/format/jpeg" alt="Petrof Fibich F-127S - Side">
+          </div>
+        </div>
+        <div class="detail-body">
+          <div class="cat">Petrof Fibich · Artist Series</div>
+          <h3>Petrof Fibich F-127S Upright Piano</h3>
+          <div class="desc">
+            The F-127S is a medium-large upright piano crafted for the discerning musician. Its elegantly styled cabinet strikes a balance between modern sophistication and timeless grace. Remarkably versatile, this model is equally at home in a private music room or a professional teaching studio. Generous string length and soundboard area deliver a warm, resonant voice with excellent projection.
+          </div>
+          <div class="specs">
+            <span><i class="fas fa-ruler"></i> Depth: 587mm</span>
+            <span><i class="fas fa-ruler-vertical"></i> Height: 1281mm</span>
+            <span><i class="fas fa-arrows-alt-h"></i> Width: 1495mm</span>
+          </div>
+          <div class="price-row">
+            <div class="price-range">$8,720 &ndash; $8,990</div>
+            <a href="/contact.html" class="btn-sm">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Petrof Fibich F-131T -->
+      <div class="product-detail-card">
+        <div class="detail-img gallery-4">
+          <div class="gallery-inner">
+            <img src="https://user-assets.sxlcdn.com/images/182709/Fmd45WZXUgNsO2hg_Ll1Zgvbwgu6.jpg?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/interlace/1/format/jpeg" alt="Petrof Fibich F-131T - Front">
+            <img src="https://user-assets.sxlcdn.com/images/182709/Fn0gwHQ_jVeJAwF3jbrAbDaBmfD8.jpg?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/interlace/1/format/jpeg" alt="Petrof Fibich F-131T - Side">
+            <img src="https://user-assets.sxlcdn.com/images/182709/FlfWTQSAjh3tmiiMNPueXvEG6vMm.jpg?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/interlace/1/format/jpeg" alt="Petrof Fibich F-131T - Detail">
+            <img src="https://user-assets.sxlcdn.com/images/182709/FtZcZQvEVLsm0SJ8vReNnvTsZhk5.jpg?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/interlace/1/format/jpeg" alt="Petrof Fibich F-131T - Badge">
+          </div>
+        </div>
+        <div class="detail-body">
+          <div class="cat">Petrof Fibich · Concert Series</div>
+          <h3>Petrof Fibich F-131T Upright Piano</h3>
+          <div class="desc">
+            The F-131T is a full-size upright piano built for the performing musician. Standing at 1316mm, it is the tallest model in the Fibich upright range and delivers the richest bass, most powerful dynamic range, and most commanding presence of any Fibich upright. Its robust action, extended key length, and generously proportioned soundboard produce a tone that rivals many small grands. The instrument of choice for demanding repertoire and serious practice.
+          </div>
+          <div class="specs">
+            <span><i class="fas fa-ruler"></i> Depth: 585mm</span>
+            <span><i class="fas fa-ruler-vertical"></i> Height: 1316mm</span>
+            <span><i class="fas fa-arrows-alt-h"></i> Width: 1470mm</span>
+          </div>
+          <div class="price-row">
+            <div class="price">$10,360</div>
+            <a href="/contact.html" class="btn-sm">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- S&L MF-125B Black Upright Piano -->
+      <div class="product-detail-card">
+        <div class="detail-img">
+          <img src="https://user-assets.sxlcdn.com/images/182709/Fh7BxLDfg8tDTSZ7yHHi29u8PTYL.jpg?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/interlace/1/format/jpeg" alt="S&L MF-125B Black Upright Piano">
+        </div>
+        <div class="detail-body">
+          <div class="cat">S&amp;L · Premium Upright</div>
+          <h3>S&amp;L MF-125B Black Upright Piano</h3>
+          <div class="desc">
+            A beautifully crafted black upright piano from S&L. The MF-125B features a rich, warm tone and a responsive touch that will satisfy both students and experienced players. Its classic black polyester gloss finish and clean lines make it a handsome addition to any home, studio, or classroom. Built with quality materials and precise regulation for lasting performance.
+          </div>
+          <div class="specs">
+            <span><i class="fas fa-tag"></i> Height: 1250mm</span>
+            <span><i class="fas fa-palette"></i> Finish: Black polyester gloss</span>
+          </div>
+          <div class="price-row">
+            <div class="price">$5,010</div>
+            <a href="/contact.html" class="btn-sm">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- S&L GP-160B Grand Piano -->
+      <div class="product-detail-card">
+        <div class="detail-img">
+          <img src="https://user-assets.sxlcdn.com/images/182709/FiSt_JdQAOkzGFIR2G4PrarxvbM_.jpg?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/interlace/1/format/jpeg" alt="S&L GP-160B Grand Piano">
+        </div>
+        <div class="detail-body">
+          <div class="cat">S&amp;L · Baby Grand</div>
+          <h3>S&amp;L GP-160B Grand Piano</h3>
+          <div class="desc">
+            An elegant baby grand piano that brings the grand piano experience into smaller spaces. The GP-160B offers the distinctive touch, tone, and visual presence of a grand piano at a compact 160cm length. Its responsive action and singing treble make it a joy to play, while the black gloss cabinet serves as a stunning focal point in any room. Ideal for discerning homes, boutique hotels, and teaching studios seeking that extra level of refinement.
+          </div>
+          <div class="specs">
+            <span><i class="fas fa-ruler"></i> Length: 1600mm</span>
+            <span><i class="fas fa-palette"></i> Finish: Black polyester gloss</span>
+          </div>
+          <div class="price-row">
+            <div class="price">$8,650</div>
+            <a href="/contact.html" class="btn-sm">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 61-Key Portable Electronic Keyboard -->
+      <div class="product-detail-card">
+        <div class="detail-img">
+          <img src="https://user-assets.sxlcdn.com/images/182709/Fo-BLwsNfRTdA815_Zxw_WSeuBd4.png?imageMogr2/strip/auto-orient/thumbnail/500x1000%3E/quality/90!/format/png" alt="61-Key Portable Electronic Keyboard">
+        </div>
+        <div class="detail-body">
+          <div class="cat">Electronic Keyboard</div>
+          <h3>61-Key Portable Electronic Keyboard</h3>
+          <div class="desc">
+            A perfect starter keyboard for beginners and hobbyists. Featuring 61 full-size keys, built-in voices and rhythms, and lightweight portability, this keyboard makes learning music accessible and fun. Ideal for children taking their first piano lessons, adults exploring music as a new hobby, or anyone needing a compact, affordable practice instrument. Powered by battery or adapter for true portability.
+          </div>
+          <div class="specs">
+            <span><i class="fas fa-keyboard"></i> 61 full-size keys</span>
+            <span><i class="fas fa-bolt"></i> Battery / AC powered</span>
+            <span><i class="fas fa-headphones"></i> Headphone output</span>
+          </div>
+          <div class="price-row">
+            <div class="price">$117</div>
+            <a href="/contact.html" class="btn-sm">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="accessories">
+  <div class="container">
+    <div class="cat-header">
+      <h2><i class="fas fa-toolbox"></i> Accessories</h2>
+      <p style="color:var(--text-light);">Teaching materials, piano parts, violin fittings, and wind instrument accessories</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;">
+      <div style="background:var(--bg-white);border-radius:12px;padding:30px 20px;text-align:center;box-shadow:0 4px 15px var(--shadow);transition:transform 0.25s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+        <i class="fas fa-book-open" style="font-size:2.5rem;color:var(--primary-light);margin-bottom:15px;"></i>
+        <h4>Teaching Materials</h4>
+        <p style="font-size:0.85rem;color:var(--text-mid);">Piano method books, violin etudes, music theory workbooks, and sheet music. Including the internationally acclaimed "LeYi Violin Tutorial" series and "Music Story House" preschool materials.</p>
+      </div>
+      <div style="background:var(--bg-white);border-radius:12px;padding:30px 20px;text-align:center;box-shadow:0 4px 15px var(--shadow);transition:transform 0.25s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+        <i class="fas fa-tools" style="font-size:2.5rem;color:var(--primary-light);margin-bottom:15px;"></i>
+        <h4>Piano Accessories</h4>
+        <p style="font-size:0.85rem;color:var(--text-mid);">Benches, covers, tuning kits, dampers, casters, lamps, and maintenance supplies for upright and grand pianos.</p>
+      </div>
+      <div style="background:var(--bg-white);border-radius:12px;padding:30px 20px;text-align:center;box-shadow:0 4px 15px var(--shadow);transition:transform 0.25s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+        <i class="fas fa-gem" style="font-size:2.5rem;color:var(--primary-light);margin-bottom:15px;"></i>
+        <h4>Violin Accessories</h4>
+        <p style="font-size:0.85rem;color:var(--text-mid);">Bow rehair, strings (Gut, Perlon, Steel), chin rests, shoulder rests, rosin, cases, and fine tuners.</p>
+      </div>
+      <div style="background:var(--bg-white);border-radius:12px;padding:30px 20px;text-align:center;box-shadow:0 4px 15px var(--shadow);transition:transform 0.25s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+        <i class="fas fa-wind" style="font-size:2.5rem;color:var(--primary-light);margin-bottom:15px;"></i>
+        <h4>Wind Instrument Accessories</h4>
+        <p style="font-size:0.85rem;color:var(--text-mid);">Reeds, mouthpieces, ligatures, cleaning swabs, valve oil, and maintenance kits for woodwind and brass instruments.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:30px;">
+      <p style="color:var(--text-light);">Contact us for pricing and availability on any accessory items.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form -->
+<section style="background:linear-gradient(135deg,#2A154F,#3B1F6E);color:#fff;padding:60px 20px;text-align:center;">
+  <div class="container" style="max-width:500px;">
+    <h2 style="color:#fff;margin-bottom:10px;">Get in Touch</h2>
+    <p style="color:rgba(255,255,255,0.8);margin-bottom:30px;">Have a question? Send us a message!</p>
+    <form action="mailto:susan@elephantmusic.cn" method="post" enctype="text/plain" style="text-align:left;">
+      <input type="text" name="name" placeholder="Your Name" required style="width:100%;padding:12px 16px;border-radius:8px;border:none;margin-bottom:12px;font-size:1rem;">
+      <input type="email" name="email" placeholder="Your Email" style="width:100%;padding:12px 16px;border-radius:8px;border:none;margin-bottom:12px;font-size:1rem;">
+      <input type="tel" name="phone" placeholder="Your Phone" style="width:100%;padding:12px 16px;border-radius:8px;border:none;margin-bottom:12px;font-size:1rem;">
+      <textarea name="message" rows="4" placeholder="Your Message" required style="width:100%;padding:12px 16px;border-radius:8px;border:none;margin-bottom:12px;font-size:1rem;resize:vertical;"></textarea>
+      <button type="submit" style="width:100%;padding:14px;background:#fff;color:#3B1F6E;font-weight:700;border:none;border-radius:30px;font-size:1rem;cursor:pointer;">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/products.html">Products</a>
+      <a href="/rental.html">Rental</a>
+      <a href="/courses.html">Courses</a>
+      <a href="/news.html">News</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <div class="contact-info" style="margin-bottom:15px;">
+      <a href="tel:13958069954"><i class="fas fa-phone"></i> +86 13958069954</a> &nbsp;|&nbsp;
+      <a href="mailto:susan@elephantmusic.cn"><i class="fas fa-envelope"></i> susan@elephantmusic.cn</a> &nbsp;|&nbsp;
+      <a href="mailto:aurora@elephantmusic.cn">aurora@elephantmusic.cn</a> &nbsp;|&nbsp;
+      <a href="mailto:amelia@elephantmusic.cn">amelia@elephantmusic.cn</a>
+    </div>
+    <p class="copyright">Hangzhou Elephant Music Instrument Co., Ltd. &copy; 2000-2026. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></button>
+<script src="/js/main.js"></script>
+
+  <!-- Navbar scroll glassmorphism effect -->
+  <script>
+  (function(){
+    var nav = document.getElementById('mainNav');
+    if (!nav) return;
+    var ticking = false;
+    function updateNav() {
+      var sy = window.pageYOffset || document.documentElement.scrollTop;
+      if (sy > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+      ticking = false;
+    }
+    window.addEventListener('scroll', function() {
+      if (!ticking) {
+        requestAnimationFrame(updateNav);
+        ticking = true;
+      }
+    }, { passive: true });
+    updateNav();
+  })();
+  </script>
+</body>
+</html>
