@@ -589,6 +589,49 @@ footer .contact-info a { color: var(--accent); }
   border-bottom: 1px solid var(--border) !important;
 }
 
+/* ============================================
+   GSAP Animation Helpers
+   ============================================ */
+
+/* Elements that GSAP animates on scroll start invisible;
+   GSAP sets the actual transforms/opacity at runtime. */
+.feature-item,
+.card,
+.product-card,
+.contact-card,
+.section-title {
+  will-change: transform, opacity;
+}
+
+/* Hero content: smooth entrance */
+.hero-content {
+  will-change: transform, opacity;
+}
+
+/* Section fade-in helper (for browsers without JS/GSAP) */
+section {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+/* Enhance feature-item card with subtle shadow on hover */
+.feature-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.feature-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px var(--shadow);
+  border-color: var(--gold) !important;
+}
+
+/* Back to top: smoother */
+#back-to-top {
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s;
+}
+#back-to-top:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
 /* ===== ENHANCED: Card hover micro-interactions ===== */
 .feature-item, .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
