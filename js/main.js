@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (hasGSAP && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
-    // --- Hero: fade-in content on page load ---
+    // --- Hero: fade-in on load ---
     const heroEl = document.querySelector('.hero');
     if (heroEl) {
       const heroContent = heroEl.querySelector('.hero-content');
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    // --- Cards (Explore section): staggered reveal ---
+    // --- Explore cards: staggered reveal ---
     gsap.utils.toArray('.card-grid').forEach(function(grid) {
       const cards = grid.querySelectorAll('.card');
       if (cards.length) {
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
 
-    // --- Product cards (products.html): staggered ---
+    // --- Product cards: staggered ---
     gsap.utils.toArray('.product-grid').forEach(function(grid) {
       const items = grid.querySelectorAll('.product-card');
       if (items.length) {
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    // --- Contact cards (contact.html): staggered ---
+    // --- Contact cards: staggered ---
     gsap.utils.toArray('.contact-grid').forEach(function(grid) {
       const cards = grid.querySelectorAll('.contact-card');
       if (cards.length) {
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    // --- Rental table (rental.html): fade in ---
+    // --- Rental table: fade in ---
     const rentalTable = document.querySelector('.rental-table');
     if (rentalTable) {
       gsap.from(rentalTable, {
@@ -183,18 +183,15 @@ document.addEventListener('DOMContentLoaded', function() {
   } // end GSAP
 
   // ════════════════════════════════════════════
-  //  NAVBAR — Scroll effect + GSAP polish
+  //  NAVBAR
   // ════════════════════════════════════════════
 
   const nav = document.querySelector('nav');
   if (nav) {
-    let lastScrollY = 0;
     let navScrolled = false;
-
     window.addEventListener('scroll', function() {
       const sy = window.scrollY;
       const shouldBeScrolled = sy > 50;
-
       if (shouldBeScrolled !== navScrolled) {
         navScrolled = shouldBeScrolled;
         nav.classList.toggle('scrolled', shouldBeScrolled);
@@ -216,7 +213,6 @@ document.addEventListener('DOMContentLoaded', function() {
       document.body.style.overflow = navLinks.classList.contains('mobile-open') ? 'hidden' : '';
     });
 
-    // --- Close menu on link click ---
     navLinks.querySelectorAll('a:not(.has-dropdown > a)').forEach(function(link) {
       link.addEventListener('click', function() {
         hamburger.classList.remove('active');

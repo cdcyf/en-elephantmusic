@@ -341,15 +341,17 @@ nav.scrolled { box-shadow: 0 2px 20px var(--shadow); }
   overflow: hidden;
   box-shadow: 0 4px 15px var(--shadow);
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 30px var(--shadow);
 }
 .card-img { width: 100%; height: 220px; object-fit: cover; }
-.card-body { padding: 24px; }
+.card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
 .card-body h3 { font-size: 1.15rem; margin-bottom: 8px; }
-.card-body p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 12px; }
+.card-body p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 12px; flex: 1; }
 .card-body .price { font-size: 1.3rem; font-weight: 700; color: var(--primary); }
 .card-body .price-sub { font-size: 0.85rem; color: var(--text-light); }
 .card-body .btn-sm {
@@ -577,6 +579,22 @@ footer .contact-info a { color: var(--accent); }
 /* ============================================
 
 
+/* ============================================
+   GSAP Animation Helpers
+   ============================================ */
+
+.feature-item,
+.card,
+.product-card,
+.contact-card,
+.section-title {
+  will-change: transform, opacity;
+}
+
+.hero-content {
+  will-change: transform, opacity;
+}
+
 /* ===== ENHANCED: Navbar scroll glassmorphism ===== */
 #mainNav {
   transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
@@ -587,49 +605,6 @@ footer .contact-info a { color: var(--accent); }
   -webkit-backdrop-filter: blur(16px) !important;
   box-shadow: 0 2px 20px rgba(59, 31, 110, 0.08) !important;
   border-bottom: 1px solid var(--border) !important;
-}
-
-/* ============================================
-   GSAP Animation Helpers
-   ============================================ */
-
-/* Elements that GSAP animates on scroll start invisible;
-   GSAP sets the actual transforms/opacity at runtime. */
-.feature-item,
-.card,
-.product-card,
-.contact-card,
-.section-title {
-  will-change: transform, opacity;
-}
-
-/* Hero content: smooth entrance */
-.hero-content {
-  will-change: transform, opacity;
-}
-
-/* Section fade-in helper (for browsers without JS/GSAP) */
-section {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-/* Enhance feature-item card with subtle shadow on hover */
-.feature-item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-.feature-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px var(--shadow);
-  border-color: var(--gold) !important;
-}
-
-/* Back to top: smoother */
-#back-to-top {
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s;
-}
-#back-to-top:hover {
-  transform: translateY(-3px) scale(1.05);
 }
 
 /* ===== ENHANCED: Card hover micro-interactions ===== */
@@ -667,3 +642,4 @@ section {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+ 
